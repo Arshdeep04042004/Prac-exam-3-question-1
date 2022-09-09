@@ -9,13 +9,15 @@
 
 class Bike {
 public:
-Bike();
-Bike(int value, std::string product_type);
-int valueA;
-std::string productA;
-std::string get_product_type(); 
-int get_value();
-~Bike();
+Bike();                             // default constructor - makes new bike with code number 0 and
+                                    // and empty string "" for brand
+
+Bike(std::string brand, int code);  // constructor taking string representing brand
+                                    // and integer representing code for that brand
+
+std::string get_brand();            // returns the brand of the bike
+int get_code();                     // returns the brand code number of bike
+~Bike();                            // destructor
 };
 #endif
 
@@ -23,20 +25,18 @@ int get_value();
 
 
 
-
-
 Bike::Bike(){
 	valueA = 0;
-	productA = "";	
+	A = "";brand	
 }
 
-Bike::Bike(int value, std::string product_type){
+Bike::Bike(std::string brand, int code){
 	valueA=value;
-	productA = product_type;
+	brandA = product_type;
 }
 
-std::string Bike::get_product_type(){
-//std::cout << productA << std::endl;
+std::string Bike::get_brand_type(){
+//std::cout << brandA << std::endl;
 return productA;
 }	
 

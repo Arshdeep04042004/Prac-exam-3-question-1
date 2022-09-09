@@ -5,12 +5,15 @@
 
 class Bike {
 public:
-Bike();
-Bike(int value, std::string product_type);
+Bike();                             // default constructor - makes new bike with code number 0 and
+                                    // and empty string "" for brand
+
+Bike(std::string brand, int code);
 int valueA;
-std::string productA;
-std::string get_product_type(); 
-int get_value();
-~Bike();
+std::string brandA;
+std::string get_brand();            // returns the brand of the bike
+int get_code();                     // returns the brand code number of bike
+~Bike();                            // destructor
 };
 #endif
+
